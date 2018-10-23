@@ -1,14 +1,11 @@
+angular.module('DemoApp')
+.controller('myController', function($scope, personService){
 
 
-angular.module('DemoApp').controller('ParentCtrl',
-	function () {
+	$scope.firstName = 'Trainee';
+	$scope.lastName = 'Russo';
 
-		var Prt = this; 
-		Prt.name = 'John';
-		
-	}).controller('SonCtrl', function(){
 
-		var Son = this; 
-		Son.name = 'Sam';
+	$scope.printName = personService.printName($scope.firstName, $scope.lastName);
 
-})
+});
