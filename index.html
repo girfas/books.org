@@ -1,0 +1,70 @@
+<!doctype html>
+<html ng-app="DemoApp">
+
+<script src="./node_modules/angular/angular.js"></script>
+<head>
+
+<title>New Page</title>
+
+	<meta name="description" content="Our first page">
+	<meta name="keywords" content="html tutorial template">
+
+</head>
+	<body>
+		
+
+		<div class="input-group" ng-controller='myController'>
+			<div class="input-group">
+				<label for="firstName"> First Name</label>
+				<input type="text" placeholder="enter your first name" ng-model="firstName"> 
+			</div>
+
+			<div class="input-group">	
+				<label for="firstName"> Last Name</label>
+				<input type="text" placeholder="enter your last name" ng-model="lastName"> 
+			</div>
+		
+		<h1> Hello, <span ng-bind="firstName"> </span><span ng-bind="lastName"> </span></h1>
+
+		<h1> Hello, {{firstName}}{{lastName}}</h1>
+		<h1> Hello, {{printName}}</h1>
+
+		<div class="container">
+			<div class="starter-template">
+				
+				 <div ng-controller="ParentCtrl as Prt">
+						<h1> Hello {{Prt.name}}</h1>
+				 	<div ng-controller="SonCtrl as Son">
+						<h1>
+							Hello {{Son.name}}, Son of 
+							{{Prt.name}}
+						</h1>
+					</div>
+
+				 </div>
+					
+
+				
+
+			</div>
+			
+		</div>
+
+
+
+
+		<script src="app.js"></script>
+		<script src="controller.js"></script>
+
+
+		</div>
+		
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+
+	
+	</body>
+</html>
