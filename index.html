@@ -1,7 +1,179 @@
-<!doctype html>
+<!DOCTYPE html>
+
+<!-- define angular app -->
+<html ng-app="scotchApp">
+
+<head>
+  <!-- SCROLLS -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+
+  <!-- SPELLS -->
+
+  
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+  <script src="script.js"></script>
+
+  	<div class="container-fluid">
+    
+		<h1>bo0Ks. <small>Org</small></h1>
+
+	</div>
+</head>
+
+<!-- define angular controller -->
+<body ng-controller="mainController">
+
+  <div class="container-fluid">
+    
+        <nav class="navbar navbar-expand-sm navbar-light bg-faded">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+
+        <!-- Brand -->
+        <a class="navbar-brand" href="#"> </a>
+
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="nav-content">   
+
+        <ul class="navbar-nav nav-fill w-100">
+            <li class="nav-item">
+                  <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                  <a class="nav-link" href="#about">Services</a>
+            </li>
+            <li class="nav-item">
+                  <a class="nav-link" href="#contact">Community work</a>
+            </li>
+            <li class="nav-item">
+                  <a class="nav-link" href="#">Current Projects</a>
+            </li>
+            <li class="nav-item">
+                  <a class="nav-link" href="#getinvolved">Get Involved</a>
+            </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="Preview" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                About
+        </a>
+            <div class="dropdown-menu" aria-labelledby="Preview">
+              <a class="dropdown-item" href="#">Vision</a>
+              <a class="dropdown-item" href="#">Team</a>
+              <a class="dropdown-item" href="#">Contact us</a>
+            </div>
+        </li>
+        </ul>
+        </div>
+        </nav>
+
+</div>
+
+  <div id="main">
+  
+    <!-- angular templating -->
+		<!-- this is where content will be injected -->
+    <div ng-view></div>
+    
+  </div>
+  
+  <footer class="text-center">
+    
+  </footer>
+  <!-- jQuery library -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+<!-- Popper -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified Bootstrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- <script data-require="angular.js@1.2.28" data-semver="1.2.28" src="https://code.angularjs.org/1.2.28/angular.js">
+ </script>
+
+  <script data-require="angular-route@1.2.28" data-semver="1.2.28" src="https://code.angularjs.org/1.2.28/angular-route.js">
+  </script> -->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+<style>
+body {
+padding-top: 1em;
+} 
+</style> 
+
+<style>
+body {
+padding-top: 1em;
+
+div#navigation ul {
+    list-style-type:none;
+    height:30px;
+    text-align:center;
+    width: 100%;      /* new */
+    display: table;   /* updated */
+}
+
+div#navigation ul li {        
+    margin-left:50px;
+    display: table-cell;  /* updated */  
+}
+
+
+.item img {
+  width:100%
+}
+} 
+</style> <div class="container-fluid">
+    
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!doctype html>
 <html ng-app="DemoApp">
 
 <script src="./node_modules/angular/angular.js"></script>
+<script src="./node_modules/angular/angular-route.js"></script>
 <head>
 
 <title>New Page</title>
@@ -10,7 +182,12 @@
 	<meta name="keywords" content="html tutorial template">
 
 </head>
+
+
 	<body>
+		<li class="active"><a href="#">Home</li>
+			<li><a href="#/about">About</a></li>
+			<li><a href="#/contact">Contact</a></li>
 		
 
 		<div class="input-group" ng-controller='myController'>
@@ -28,6 +205,7 @@
 
 		<h1> Hello, {{firstName}}{{lastName}}</h1>
 		<h1> Hello, {{printName}}</h1>
+		<ng-view></ng-view>
 
 		<div class="container">
 			<div class="starter-template">
@@ -55,16 +233,17 @@
 
 		<script src="app.js"></script>
 		<script src="controller.js"></script>
+		
 
 
 		</div>
 		
-    <!-- Optional JavaScript -->
+    < Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
 
 	
-	</body>
-</html>
+	<!-- </body>
+</html>  --> 

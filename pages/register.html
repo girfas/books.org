@@ -1,0 +1,63 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="dist/css/bootstrap-formhelpers.min.css" rel="stylesheet" media="screen">
+
+<div class="container">
+    <div class="row">
+        <div class='col-md-3'></div>
+        <div class="col-md-5">
+            <div class="login-box well" style="margin-bottom: 15px; margin-top: 123px;">
+                    <form action="">
+                           <legend>Register</legend> 
+
+                        <div class="form-group">
+                            <label> First Name</label>
+                            <input value='' id="firstName" placeholder="name" type="text" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label> Last Name</label>
+                            <input id="lastName" value='' placeholder="lastName" type="text" class="form-control" />
+                        </div>
+                     
+
+                        <div class="col-md-14">
+                            <label>Country</label>
+                            <div class="bfh-selectbox bfh-countries" data-country="US" data-flags="true">
+                            </div>
+                            <br/>
+                        
+                        </div>
+
+                        <div class="form-group">
+                            <label>PhoneNumber</label>
+                            <input id="phoneNumber" value='' placeholder="phoneNumber" type="text" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input id="email" value='' placeholder="email" type="text" class="form-control" />
+                        </div>
+                     
+                          <a href="success.html" class="btn btn-default btn-block m-t-md">Submit</a>
+                     
+                    </form>
+                
+            </div>
+        </div>
+        <div class='col-md-4'></div>
+    </div>
+</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <!-- Bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <!-- Bootstrap Form Helpers -->
+    <script src="dist/js/bootstrap-formhelpers.min.js"></script>
+    <script>
+    function getVal() {
+        // This will get the value of #timepicker
+        alert($("#timepicker").val())
+    }
